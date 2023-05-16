@@ -1,0 +1,94 @@
+@keyframes flash {
+    0% {
+        box-shadow: none;
+    }
+    20% {
+        box-shadow: 0 0 10px #ccc;
+    }
+    40% {
+        box-shadow: none;
+    }
+    60% {
+        box-shadow: 0 0 10px #ccc;
+    }
+    80% {
+        box-shadow: none;
+    }
+    100% {
+        box-shadow: 0 0 10px #ccc;
+    }
+    110% {
+        box-shadow: none;
+    }
+}
+
+#root {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+}
+
+#root .brands {
+    box-shadow: 0 0 10px #ccc;
+    display: flex;
+    flex-direction: row;
+    border-radius: 15px;
+}
+
+#root .brands>* {
+    width: 34%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#root .brands>*:hover {
+    animation: flash 6s infinite;
+}
+
+#root .brands>*:first-child {
+    border-radius: 15px 0 0 15px;
+}
+
+#root .brands>*:last-child {
+    border-radius: 0 15px 15px 0;
+}
+
+#root .brands>* {
+    padding: 10px;
+    transition: 300ms all;
+}
+
+#root .brands>* .logo {
+    height: 80%;
+}
+
+#root .brands>* .logo img {
+    width: 100%;
+    height: 100%;
+    transition: 300ms all;
+    border-radius: 5px;
+}
+
+#root .brands>* .logo img:hover {
+    transform: scale(1.02);
+}
+
+#root .brands>* .brand {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+#root .brands>* .brand .title {
+    color: #fff;
+    font-weight: 700;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+
+#root .brands>* .brand .description {
+    color: #aaa;
+    font-weight: 600;
+}

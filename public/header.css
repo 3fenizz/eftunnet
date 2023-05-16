@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    left: 0;
+    top: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    list-style-type: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html,
+body,
+.container {
+    width: 100%;
+    height: auto;
+}
+
+@keyframes shake {
+    0% {
+        margin-left: 0;
+    }
+    50% {
+        margin-left: 10px;
+        color: #004074;
+    }
+    70% {
+        margin-left: 0;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
+
+.container {
+    background-color: #121416;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 8vh;
+    background-color: #000;
+    border-bottom: 1px solid #303030;
+    padding: 0 3%;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 5px #ccc;
+    border-radius: 0 0 15px 15px;
+}
+
+.container .header .logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .header .logo a img {
+    width: 50px;
+    height: 50px;
+}
+
+.container .header .redirects {
+    display: flex;
+    margin-right: auto;
+}
+
+.container .header .redirects ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.container .header .redirects ul li {
+    padding: 0 10px;
+}
+
+.container .header .redirects ul li a {
+    padding: 10px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.container .header .redirects ul .drop {
+    position: relative;
+}
+
+.container .header .redirects ul .drop:not(:hover) ul {
+    z-index: -10;
+    opacity: 0;
+    top: 0;
+}
+
+.container .header .redirects ul .drop:hover ul {
+    z-index: 1;
+    display: flex;
+}
+
+.container .header .redirects ul .drop ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 150%;
+    width: 250%;
+    transition: 300ms all;
+    border: 1px solid #aaa;
+    border-radius: 15px 0 0 15px;
+    background-color: #202020;
+    box-shadow: 0 0 3px #ccc;
+    padding: 15px 10px;
+    justify-content: center;
+}
+
+.container .header .redirects ul .drop ul li {
+    width: 100%;
+    padding: 10px;
+}
+
+.container .header .redirects ul .drop ul li {
+    display: flex;
+    flex-direction: row;
+}
+
+.container .header .redirects ul .drop ul li img {
+    position: absolute;
+    left: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px #303030;
+    border-radius: 0 15px 15px 0;
+}
+
+.container .header .redirects ul .drop ul li a {
+    color: #fff;
+    font-weight: 600;
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    transition: 300ms all;
+}
+
+.container .header .redirects ul .drop ul li a:hover {
+    margin-left: 10px;
+}
+
+.container .header .redirects ul .drop ul li a:not(:hover) + img {
+    display: none;
+}
+
+.container .header .redirects .line {
+    margin-left: auto;
+    height: 80%;
+    background-color: #303030;
+    width: 3px;
+}
+
+.container .header .data {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .header .data  .basket {
+    font-weight: 600;
+}
+
+.container .header .data .basket a i,
+.container .header .data .basket a {
+    color: #004074;
+}
+
+.container .header .data .account {
+    display: flex;
+    flex-direction: row;
+    padding: 0 20px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.container .header .data .account .logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.container .header .data .account .name {
+    font-weight: 700;
+    cursor: pointer;
+    color: #fff;
+}
+
+.container .header .data .account .name a {
+    color: #fff;
+    padding: 10px;
+}
+
+.container .header .search {
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    margin-right: auto;
+}
+
+.container .header .search input {
+    width: 125vh;
+    box-shadow: 0 0 3px #ccc;
+    border-radius: 5px 0 0 5px;
+    padding: 10px 15px;
+    transition: 500ms all;
+    color: #000;
+    font-weight: 600;
+    background-color: transparent;
+    color: #fff;
+}
+
+.container .header .search input::placeholder {
+    color: #ccc;
+    transition: 300ms all;
+}
+.container .header .search input:focus::placeholder {
+    color: #fff;
+}
+
+.container .header .search i {
+    color: #fff;
+}
+
+.container .header .search input:focus + i {
+    background-color: #006aff;
+    box-shadow: 0 0 3px #000;
+}
+
+.container .header .search i {
+    border-radius: 0 5px 5px 0;
+    border: 1px solid #ccc;
+    align-items: center;
+    transition: 300ms all;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.container .header .data .account .profile-detail {
+    position: absolute;
+    top: 100%;
+    left: 10%;
+    background-color: #303030;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    width: 100%;
+    padding: 15px;
+    z-index: 5;
+    box-shadow: 0 0 10px #ccc;
+    transition: 300ms all;
+}
+
+.container .header .data .account .profile-detail ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.container .header .data .account .profile-detail ul li {
+    padding: 10px;
+}
+
+.container .header .data .account .profile-detail ul .line {
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    margin: 10px 0;
+}
+
+.container .header .data .account .profile-detail ul li a {
+    color: #fff;
+    font-weight: 600;
+}
+
+.container .header .data .account .profile-detail ul li a:hover {
+    animation: shake 1s normal;
+}
+
+.container .header .data .account .profile-detail ul li #logout {
+    color: #aa0000;
+}
+
+.container .header .data .account:not(:hover) .profile-detail {
+    z-index: -4;
+    top: 0;
+}
