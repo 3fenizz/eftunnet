@@ -1,0 +1,37 @@
+#root {
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+}
+
+#root .prdct-cntnr {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px #ccc;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#root .prdct-cntnr .prdct {
+    width: 20%;
+    height: 30%;
+    min-width: 40vh;
+    min-height: 60vh;
+    box-shadow: 0 0 5px #ccc;
+    margin: 2%;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#root .prdct-cntnr .prdct .prdct-image {
+    width: 80%;
+    height: 80%;
+}
+
+#root .prdct-cntnr .prdct .prdct-image img {
+    width: 100%;
+    height: 100%;
+}
