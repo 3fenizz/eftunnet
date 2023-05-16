@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title><%=title%></title>
+	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+	<div class="container">
+
+		<%-include('inc/header')%>
+
+		<div id="root">
+			<div class="brands">
+				<div class="puma">
+					<div class="logo">
+						<img src="https://www.cildimveben.com/content/cover/796x512/istock-1269853971.webp" alt="PUMA">
+					</div>
+					<div class="brand">
+						<a href="/bakim">
+							<div class="title">Bakım</div>
+							<div class="description">Cildine önem veren ürünlere eriş!</div>
+						</a>
+					</div>
+				</div>
+				<div class="adidas">
+					<div class="logo">
+						<img src="https://assets.website-files.com/5ee732bebd9839b494ff27cd/5ee732bebd9839d388ff2800_adidas-logo-e1468257076328.jpg" alt="ADIDAS">
+					</div>
+					<div class="brand">
+						<a href="/adidas">
+							<div class="title">ADIDAS</div>
+							<div class="description">ADIDAS ile ilgili ürünler için tıkla!</div>
+						</a>
+					</div>
+				</div>
+				<div class="mavi">
+					<div class="logo">
+						<img src="http://helalplatform.com/images/haberler/mavi-jeans-sahibi-kimin-mavi-jeans-hangi-ulkenin-.jpg" alt="MAVİ">
+					</div>
+					<div class="brand">
+						<a href="/mavi">
+							<div class="title">MAVİ</div>
+							<div class="description">MAVİ ile ilgili ürünler için tıkla!</div>
+						</a>
+					</div>
+				</div>
+				<div class="msi">
+					<div class="logo">
+						<img src="https://www.dsogaming.com/wp-content/uploads/2020/07/MSI-logo.jpg" alt="">
+					</div>
+					<div class="brand">
+						<a href="/msi">
+							<div class="title">MSI</div>
+							<div class="description">MSI ile ilgili ürünler için tıkla!</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<%-include('inc/footer') %>
+	</div>
+</body>
+</html>
